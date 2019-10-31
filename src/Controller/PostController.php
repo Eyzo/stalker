@@ -55,8 +55,7 @@ class PostController extends AbstractController
       $post = $this->em->getRepository(Post::class)->find($id);
       $this->em->remove($post);
       $this->em->flush();
-      $posts = $this->em->getRepository(Post::class)->findAll();
-      $data = $this->serializer->serialize($posts,JsonEncoder::FORMAT);
+      $data = $this->serializer->serialize('ok',JsonEncoder::FORMAT);
       return new JsonResponse($data,Response::HTTP_OK,[],true);
 
     }

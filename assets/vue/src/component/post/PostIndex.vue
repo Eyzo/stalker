@@ -32,7 +32,7 @@
             }
         },
         created() {
-            this.$store.dispatch('post/fetchPost',this.$route.params.id);
+            this.$store.dispatch('post/SETTING_ID',this.$route.params.id);
         },
         methods: {
             deletingPost: function (event) {
